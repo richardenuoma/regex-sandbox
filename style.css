@@ -1,0 +1,78 @@
+:root{
+    --background: rgb(30, 30, 47);
+    --font-family: 'Poppins';
+    ---button-color: rgb(211, 140, 9);
+    --button-colorHover: rgb(200, 125, 12);
+    --text-colorWhite: white;
+    --text-colorBlack: black;
+}
+
+body{
+    background: var(--background);
+    font-family: var(--font-family);
+
+}
+
+h1{
+    color: var(--text-colorWhite);
+    text-align: center;
+}
+
+header{
+    display: flex;
+    border: 2px solid white;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    padding: 15px;
+    margin: 0 auto; 
+}
+
+header #input-container{
+    background: var(--text-colorWhite);
+    border: 2px solid gray; 
+    width: 40%;
+    padding: 15px;
+    color: var(--text-colorBlack);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #input-container input[type="text"]{
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-family: var(--font-family)
+}
+
+input[type="text"]::placeholder{
+    font-family: var(--font-family)
+}
+
+section{
+    border: 2px solid white; 
+    margin: 10px auto; 
+    width: 50%;
+    /* padding: 15px; */
+
+
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+section h3{
+    color: var(--text-colorWhite);
+    padding: 5px;
+}
+
+section input[type="text"]{
+    display: block;
+    padding: 15px;
+    outline: none;
+    width: 
+}
