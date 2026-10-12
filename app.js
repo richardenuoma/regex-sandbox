@@ -21,20 +21,16 @@ function getFlags(){
 
 
 testButton.addEventListener('click', ()=>{
-    let regEx = new RegExp(regexPattern.value, getFlags());
-    testString = stringToTest.textContent || stringToTest.value;
-    let confirmPattern = regEx.test(testString);
+    const originalText = stringToTest.textContent || stringToTest.value;
+    const regEx = new RegExp(regexPattern.value, getFlags());
 
-    if(confirmPattern){
-        stringToTest.className = "highlight"
-        testResult.textContent = "Match Found!";
-        regEx.lastIndex = 0; 
-        let  highlighted = testString.replace(regEx, match => `<span class="highlight">${match}</span>`)
-        return highlighted;
+    const matches = originalText.match(regEx);
+
+    if(matches){
+        testResult.textContent = matches.join(",");
+        stringToTest.innerHTML = originalText.replace(regEx, `<span class="highlight">$8</span>`)
     }else{
-        stringToTest.className ="";
-        testResult.textContent = "No Result Found!"
-        stringToTest.textContent = testString;
+        testResult.textContent = "no match";
     }
 }
 )
